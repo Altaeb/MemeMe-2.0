@@ -25,7 +25,6 @@ class SentMemesTableViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
 
         super.viewWillAppear(animated)
-
         //Set Navigation Controller & Tab Bar Controller Hidden Properties
         navigationController?.isNavigationBarHidden = false
         tabBarController?.tabBar.isHidden = false
@@ -79,7 +78,7 @@ class SentMemesTableViewController: UITableViewController {
         navigationController?.pushViewController(memeDetail, animated: true)
     }
 
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
 
         switch editingStyle {
         case .delete:

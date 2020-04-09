@@ -41,7 +41,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="383" height="100"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fXB-ZQ-A5Z">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fXB-ZQ-A5Z">
                                             <rect key="frame" x="5" y="0.0" width="153" height="100"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zha-Oa-bZa">
@@ -87,7 +87,7 @@
                     <navigationItem key="navigationItem" title="Sent Memes" id="7Td-hA-KKI">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="9Gu-EI-U3A">
                             <connections>
-                                <segue destination="etn-s9-MRh" kind="presentation" id="fPk-qA-Ywf"/>
+                                <segue destination="etn-s9-MRh" kind="presentation" identifier="showMemeEditor" id="fPk-qA-Ywf"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -158,7 +158,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="796-U3-VZ0">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="796-U3-VZ0">
                                             <rect key="frame" x="2" y="2" width="196" height="196"/>
                                         </imageView>
                                     </subviews>
@@ -183,7 +183,7 @@
                     <navigationItem key="navigationItem" title="Sent Memes" id="YR1-kF-fBa">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="RvN-7I-8jE">
                             <connections>
-                                <segue destination="etn-s9-MRh" kind="presentation" id="nSa-AA-X7T"/>
+                                <segue destination="etn-s9-MRh" kind="presentation" identifier="showMemeEditor" id="nSa-AA-X7T"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -193,6 +193,7 @@
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cjl-kU-bRa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="clY-K4-fdF" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1024.8" y="596.85157421289364"/>
         </scene>
@@ -225,24 +226,11 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="53E-Lr-9A3">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YFe-ZB-227">
                                 <rect key="frame" x="0.0" y="44" width="414" height="715"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YFe-ZB-227">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="715"/>
-                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    </imageView>
-                                </subviews>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstItem="YFe-ZB-227" firstAttribute="leading" secondItem="53E-Lr-9A3" secondAttribute="leading" id="4j9-2m-BMd"/>
-                                    <constraint firstAttribute="bottom" secondItem="YFe-ZB-227" secondAttribute="bottom" id="DZu-Yw-6ZW"/>
-                                    <constraint firstItem="YFe-ZB-227" firstAttribute="top" secondItem="53E-Lr-9A3" secondAttribute="top" id="GCI-8N-WKG"/>
-                                    <constraint firstAttribute="trailing" secondItem="YFe-ZB-227" secondAttribute="trailing" id="LYg-gl-Mfs"/>
-                                    <constraint firstItem="YFe-ZB-227" firstAttribute="width" secondItem="53E-Lr-9A3" secondAttribute="width" priority="250" id="UpN-kx-49t"/>
-                                    <constraint firstItem="YFe-ZB-227" firstAttribute="height" secondItem="53E-Lr-9A3" secondAttribute="height" priority="250" id="rY2-aN-ZVj"/>
-                                </constraints>
-                            </scrollView>
+                            </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="TOP" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NNY-Rw-5CL">
                                 <rect key="frame" x="24" y="74" width="366" height="18.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -293,17 +281,13 @@
                                 <variation key="heightClass=compact-widthClass=compact" constant="10"/>
                             </constraint>
                             <constraint firstItem="wYR-p5-K0W" firstAttribute="leading" secondItem="IID-1D-cBS" secondAttribute="leading" id="NbJ-1s-pKc"/>
-                            <constraint firstAttribute="trailing" secondItem="53E-Lr-9A3" secondAttribute="trailing" id="UI6-tc-4Sq"/>
-                            <constraint firstItem="53E-Lr-9A3" firstAttribute="top" secondItem="sQG-WN-zTU" secondAttribute="bottom" id="VDf-Ur-kBo"/>
                             <constraint firstItem="NNY-Rw-5CL" firstAttribute="leading" secondItem="IID-1D-cBS" secondAttribute="leadingMargin" constant="4" id="VMd-0a-gkc"/>
                             <constraint firstItem="sQG-WN-zTU" firstAttribute="top" secondItem="Luv-aR-RVK" secondAttribute="top" id="fMI-UR-Zml"/>
                             <constraint firstAttribute="trailing" secondItem="sQG-WN-zTU" secondAttribute="trailing" id="kII-Zw-xGp"/>
                             <constraint firstItem="st1-N2-z9y" firstAttribute="leading" secondItem="IID-1D-cBS" secondAttribute="leadingMargin" constant="4" id="mPP-ze-q1B"/>
-                            <constraint firstItem="53E-Lr-9A3" firstAttribute="leading" secondItem="IID-1D-cBS" secondAttribute="leading" id="nvl-aC-3rI"/>
                             <constraint firstItem="NNY-Rw-5CL" firstAttribute="top" secondItem="sQG-WN-zTU" secondAttribute="bottom" constant="30" id="q9c-hQ-ehy">
                                 <variation key="heightClass=compact-widthClass=compact" constant="10"/>
                             </constraint>
-                            <constraint firstItem="wYR-p5-K0W" firstAttribute="top" secondItem="53E-Lr-9A3" secondAttribute="bottom" id="qAB-VS-I59"/>
                             <constraint firstAttribute="trailingMargin" secondItem="st1-N2-z9y" secondAttribute="trailing" constant="4" id="sqo-DY-rt6"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Luv-aR-RVK"/>
@@ -314,16 +298,16 @@
                         <outlet property="cameraButton" destination="cJw-u4-sFt" id="yEA-ED-AOv"/>
                         <outlet property="imagePickerView" destination="YFe-ZB-227" id="l11-aM-jpH"/>
                         <outlet property="navBar" destination="sQG-WN-zTU" id="aTO-ht-iR2"/>
-                        <outlet property="scrollView" destination="53E-Lr-9A3" id="OoZ-Qx-B7A"/>
                         <outlet property="shareButton" destination="B7L-w6-hlY" id="dJc-mu-g9X"/>
                         <outlet property="toolBar" destination="wYR-p5-K0W" id="Jjr-4I-ITi"/>
                         <outlet property="topTextField" destination="NNY-Rw-5CL" id="MEy-L5-vi3"/>
                         <segue destination="cGa-cz-4qN" kind="show" identifier="fontsTableView" id="olT-dt-wSd"/>
+                        <segue destination="clY-K4-fdF" kind="unwind" identifier="showMemeEditor" unwindAction="unwindToSentMemeTableWithUnwindSegue:" id="NAa-8Y-HmM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fUa-PG-jij" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2846" y="185"/>
+            <point key="canvasLocation" x="2844.9275362318845" y="184.82142857142856"/>
         </scene>
         <!--Fonts Table View Controller-->
         <scene sceneID="e7u-Wm-R2r">
@@ -414,11 +398,11 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Collection" width="16" height="16"/>
-        <image name="Table" width="16" height="16"/>
+        <image name="Collection" width="30" height="30.5"/>
+        <image name="Table" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="fPk-qA-Ywf"/>
+        <segue reference="nSa-AA-X7T"/>
         <segue reference="qRf-3S-vNk"/>
     </inferredMetricsTieBreakers>
 </document>

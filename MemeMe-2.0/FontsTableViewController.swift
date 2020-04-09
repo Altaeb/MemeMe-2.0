@@ -63,7 +63,7 @@ class FontsTableViewController: UITableViewController {
 
     }
 
-    func dismissViewController() {
+    @objc func dismissViewController() {
 
         dismiss(animated: true, completion: nil)
     }

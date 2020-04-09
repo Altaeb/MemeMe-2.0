@@ -21,7 +21,7 @@ class SentMemesCollectionViewController: UICollectionViewController {
         let dimension: CGFloat
 
 
-        if (UIDeviceOrientationIsPortrait(UIDevice.current.orientation)) {
+        if (UIDevice.current.orientation.isPortrait) {
             space = 3.0
             dimension = (view.frame.size.width - (2 * space)) / 3 //3 per line
         } else {

@@ -14,6 +14,13 @@ struct AppModel {
     static let defaultBottomTextFieldText = "BOTTOM"
     static let fontsTableViewSegueIdentifier = "fontsTableView"
     static let fontsCellReuseIdentifier = "fontsCell"
+    static let memesTableCellReuseIdentifier = "memesTableCell"
+    static let memesCollectionCellReuseIdentifier = "memesCollectionCell"
+    static let memeEditorStoryboardIdentifier = "MemeEditorViewController"
+    static let memeDetailStoryboardIdentifier = "MemeDetailViewControler"
+    static let memeDetailTableSegueIdentifier = "sentMemesTableShowDetail"
+    static let memeDetailCollectionSegueIdentifier = "sentMemesCollectionShowDetail"
+    static let memeEditorSegueIdentifier = "showMemeEditor"
 
     struct alert {
 
